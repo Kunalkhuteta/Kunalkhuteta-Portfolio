@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import axios from "axios";
-
+require("dotenv").config();
 const Contact = () => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
@@ -20,8 +20,8 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      // 🔹 Replace this URL with your deployed backend URL
-const backendUrl = "http://localhost:5000/api/contact";
+      const API = process.env.REACT_APP_API_URI || "http://localhost:6000";
+const backendUrl = `${API}/api/contact`;
 
 
       const res = await axios.post(backendUrl, formData);
