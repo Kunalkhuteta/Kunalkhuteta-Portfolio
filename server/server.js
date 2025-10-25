@@ -8,7 +8,12 @@ const Contact = require("./models/Contact");
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["https://kunalkhuteta-portfolio.vercel.app", "http://localhost:3000"], 
+  methods: ["GET", "POST"],
+  credentials: true
+}));
+
 app.use(express.json());
 console.log("MONGO_URI value:", process.env.MONGO_URI);
 
