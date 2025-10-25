@@ -20,7 +20,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const API = process.env.REACT_APP_API_URI || "http://localhost:3000";
+      const API = process.env.REACT_APP_API_URI || `http://localhost:6000`;
 const backendUrl = `${API}/api/contact`;
 
 
