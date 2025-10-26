@@ -65,13 +65,13 @@ const Hero = () => {
                 <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">
                   MERN
                 </span>
-                <span className="px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium">
+                <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">
                   AI
                 </span>
-                <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium">
+                <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">
                   C++
                 </span>
-                <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium">
+                <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">
                   DSA
                 </span>
               </div>
