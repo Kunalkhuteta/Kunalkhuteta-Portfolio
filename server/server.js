@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: ["https://kunalkhuteta-portfolio.vercel.app", "http://localhost:3000"], 
+  origin: ["https://kunalkhuteta-portfolio.vercel.app", "http://localhost:8080",], 
   methods: ["GET", "POST"],
   credentials: true
 }));
@@ -43,5 +43,6 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 6000;
+// const PORT =10000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`🚀 Server is running on port ${PORT}`));

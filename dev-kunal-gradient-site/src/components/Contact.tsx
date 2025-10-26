@@ -5,7 +5,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import axios from "axios";
-require("dotenv").config();
+// import dotenv from "dotenv";
+// dotenv.config(); 
 const Contact = () => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
@@ -20,8 +21,16 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const API = process.env.REACT_APP_API_URI || `http://localhost:6000`;
+
+// Auto-detect environment
+const isLocalhost = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+
+const API = isLocalhost
+  ? "http://localhost:10000" // your local backend
+  : "https://kunalkhuteta-portfolio-1.onrender.com"; // your deployed backend
+
 const backendUrl = `${API}/api/contact`;
+
 
 
       const res = await axios.post(backendUrl, formData);
