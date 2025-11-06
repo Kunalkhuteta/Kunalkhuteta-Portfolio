@@ -21,7 +21,15 @@ const Projects = () => {
       githubUrl: "https://github.com/Kunalkhuteta/leetcode",
       tags: ["C++", "Data Structures", "Algorithms", "Problem Solving"],
     },
-    
+    {
+  title: "Markdown Presentation Tool",
+  description:
+    "A web app to create, edit, and present Markdown Presentation as stunning slides. Supports CLI for offline use, and exporting into formats like PDF and HTML, which makes good or dev and non dev users.",
+  image: "/markdown-presentation.png",
+  githubUrl: "https://github.com/Kunalkhuteta/markdown-presentation-tool",
+  tags: ["MERN", "Python", "Version Control", "TailwindCSS", "ShadCN"],
+}
+
     
   ];
 
