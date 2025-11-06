@@ -35,6 +35,15 @@ const Hero = () => {
     const element = document.getElementById("contact");
     element?.scrollIntoView({ behavior: "smooth" });
   };
+    const handleDownload = () => {
+    const baseUrl =
+      process.env.NODE_ENV === "production"
+        ? "https://kunalkhuteta-portfolio-1.onrender.com"
+
+        : "http://localhost:10000";
+
+    window.open(`${baseUrl}/download/Kunal_Khuteta_Resume.pdf`, "_self");
+  };
 
   return (
     <section
@@ -90,14 +99,14 @@ const Hero = () => {
                 <Mail className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
                 Hire Me
               </Button>
-              {/* <Button
+              <Button onClick={handleDownload}  
                 size="lg"
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-background group"
               >
                 <Download className="mr-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
                 Download Resume
-              </Button> */}
+              </Button>
             </div>
           </div>
 
